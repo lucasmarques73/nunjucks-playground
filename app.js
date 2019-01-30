@@ -14,6 +14,13 @@ app.get( '/', function( req, res ) {
     return res.render( 'index.html' ) ;
 } ) ;
 
+app.get( '/company/:company', function( req, res ) {
+    var data = {
+        company: req.params.company
+    }
+    return res.render( 'company.html', data ) ;
+} ) ;
+
 app.get( '/data', function( req, res ) {
     var data = {
         firstName: 'Andy',
@@ -21,6 +28,8 @@ app.get( '/data', function( req, res ) {
     } ;
     return res.render( 'data.html', data ) ;
 } ) ;
+
+
 
 app.listen( port, () => {
     console.log(`Running in ${port}`)
