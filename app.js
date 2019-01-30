@@ -3,7 +3,7 @@ var nunjucks = require( 'nunjucks' ) ;
 var app = express() ;
 var port = 3000;
 
-var PATH_TO_TEMPLATES = '.' ;
+var PATH_TO_TEMPLATES = 'views' ;
 nunjucks.configure( PATH_TO_TEMPLATES, {
     autoescape: true,
     express: app
